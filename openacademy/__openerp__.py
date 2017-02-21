@@ -2,9 +2,7 @@
 {
     'name': "Open Academy",
 
-    'summary': """Manage trainings""",
-
-    
+    'summary': """Manage trainings""", 
 
     'author': "friendly computer",
     'website': "http://www.friendlycomputer.com",
@@ -25,7 +23,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        #'demo.xml',
+        'demo/openacademy_course_demo.xml',
     ],
     'installable': True,
     'auto_install': False,
