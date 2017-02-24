@@ -1,5 +1,6 @@
-# -*- coding: utf-8 -*_
-from openerp import api, fields, models
+# -*- coding: utf-8 -*-
+
+from openerp import api, exceptions, fields, models
 
 class Session(models.Model):
 
@@ -15,7 +16,7 @@ class Session(models.Model):
 					("category_id.name", "ilike", "Teacher"),
 				   ])
     course_id = fields.Many2one('openacademy.course',
-         ondelete='cascade', string="Course", required=True)
+        ondelete='cascade', string="Course", required=True)
     attendee_ids = fields.Many2many('res.partner', string="Attendees")
     taken_seats = fields.Float(string="Taken seats", compute='_taken_seats',
                                store=True)
@@ -45,3 +46,11 @@ class Session(models.Model):
                     'message': "Increase seats or remove excess attendees",
                 },
             }
+
+    @api.one
+    @api.constrains('instructor_id', 'attendee_ids')
+    def _check_instructor_not_in_attendees(self):
+        print "Estas dentrol constraint python"
+        if self.instructor_id and self.instructor_id in self.attendee_ids:
+            raise exceptions.ValidationError("A session's instructor can't be an attendee")
+
