@@ -3,7 +3,6 @@
     'name': "Open Academy",
 
     'summary': """Manage trainings""", 
-
     'author': "friendly computer",
     'website': "http://www.friendlycomputer.com",
 
@@ -14,7 +13,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','board'],
+    'depends': ['base', 'board'],
 
     # always loaded
     'data': [

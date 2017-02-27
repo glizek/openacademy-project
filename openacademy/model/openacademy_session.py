@@ -64,14 +64,14 @@ class Session(models.Model):
     @api.one
     @api.constrains('instructor_id', 'attendee_ids')
     def _check_instructor_not_in_attendees(self):
-        print "Estas dentrol constraint python"
+        # print "Estas dentrol constraint python"
         if self.instructor_id and self.instructor_id in self.attendee_ids:
             raise exceptions.ValidationError(_("A session's instructor can't be an attendee"))
 
     @api.one
     @api.depends('duration', 'start_date')
     def _get_end_date(self):
-        print "_get_end_date++++++++++"
+        # print "_get_end_date++++++++++"
         if not (self.start_date and self.duration):
             self.end_date = self.start_date
             return
@@ -86,7 +86,7 @@ class Session(models.Model):
     def _set_end_date(self):
         if not (self.start_date and self.end_date):
             return
-        print "_set_end_date--------------"
+        # print "_set_end_date--------------"
         # Compute the difference between dates, but: Friday - Monday = 4 days,
         # so add one day to get 5 days instead
         start_date = fields.Datetime.from_string(self.start_date)
