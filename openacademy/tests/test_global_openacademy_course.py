@@ -5,6 +5,7 @@ from psycopg2 import IntegrityError
 from openerp.tests.common import TransactionCase
 from openerp.tools import mute_logger
 
+
 class GlobalTestOpenAcademyCourse(TransactionCase):
     '''
     Global test to openacademy course model.
@@ -37,7 +38,7 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
         Test create a course with same name and description.
         To raise contraint of name different to description.
         '''
-     
+
         # Error raised expected with message expected.
         with self.assertRaisesRegexp(
                 IntegrityError,
@@ -69,4 +70,4 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
         '''
         course = self.env.ref('openacademy.course0')
         course_id = course.copy()
-        # print "course_id", course_id 
+        # print "course_id", course_id

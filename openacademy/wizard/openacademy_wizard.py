@@ -2,6 +2,7 @@
 
 from openerp import api, fields, models
 
+
 class Wizard(models.TransientModel):
     _name = 'openacademy.wizard'
 

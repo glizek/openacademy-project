@@ -4,8 +4,8 @@ from datetime import timedelta
 
 from openerp import api, exceptions, fields, models, _
 
-class Session(models.Model):
 
+class Session(models.Model):
     _name = 'openacademy.session'
 
     name = fields.Char(required=True)
@@ -14,26 +14,26 @@ class Session(models.Model):
     seats = fields.Integer(string="Number of seats")
     instructor_id = fields.Many2one('res.partner', string="Instructor",
                                     domain=['|',
-					("instructor", "=", True),
-					("category_id.name", "ilike", "Teacher"),
-				   ])
+                                        ("instructor", "=", True),
+                                        ("category_id.name", "ilike", "Teacher"),
+                                    ])
     course_id = fields.Many2one('openacademy.course',
-        ondelete='cascade', string="Course", required=True)
+         ondelete='cascade', string="Course", required=True)
     attendee_ids = fields.Many2many('res.partner', string="Attendees")
     taken_seats = fields.Float(string="Taken seats", compute='_taken_seats',
                                store=True)
     active = fields.Boolean(default=True)
     end_date = fields.Date(string="End Date", store=True,
-        compute='_get_end_date', inverse='_set_end_date')
+         compute='_get_end_date', inverse='_set_end_date')
     hours = fields.Float(string="Duration in hours",
-                         compute='_get_hours', inverse='_set_hours')
+                          compute='_get_hours', inverse='_set_hours')
     attendees_count = fields.Integer(
-        string="Attendees count", compute='_get_attendees_count', store=True)
+         string="Attendees count", compute='_get_attendees_count', store=True)
     color = fields.Integer()
     state = fields.Selection([
-                  	     ('draft', 'Draft'),
-			     ('confirmed', 'Confirmed'),
-			     ('done', 'Done'),
+                              ('draft', 'Draft'),
+                              ('confirmed', 'Confirmed'),
+                              ('done', 'Done'),
                              ], default='draft', readonly=True)
 
     @api.one
@@ -64,7 +64,6 @@ class Session(models.Model):
     @api.one
     @api.constrains('instructor_id', 'attendee_ids')
     def _check_instructor_not_in_attendees(self):
-        # print "Estas dentrol constraint python"
         if self.instructor_id and self.instructor_id in self.attendee_ids:
             raise exceptions.ValidationError(_("A session's instructor can't be an attendee"))
 
@@ -118,3 +117,5 @@ class Session(models.Model):
     @api.one
     def action_done(self):
         self.state = 'done'
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
