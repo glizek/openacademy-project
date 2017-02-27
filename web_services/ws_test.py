@@ -32,12 +32,18 @@ course_ids = call('openacademy.course', method_name, domain)
 course_id = course_ids[0]
 print "course_ids", course_ids
 
-method_name= 'create'
-course_id = call('openacademy.course', method_name, {'name': 'Curso Odoo 1'})
+# method_name= 'create'
+# course_id = call('openacademy.course', method_name, {'name': 'Curso Odoo 1'})
 
+# 3.create a new session
 method_name = 'create'
+responsible_id = call('res.partner', 'search',[('name', '=', 'Vauxoo')])[0]
+print "responsible_id", responsible_id
 new_sesion_id = call(model, method_name, {
     'name' : 'Session from ws',
+    'instructor_id': responsible_id,
     'course_id' : course_id,
+    #  'attendee_ids': [(4, responsible_id)],
+    'attendee_ids': [(4, 3), (4, 7)],
 })
 print "new_sesion_id", new_sesion_id
