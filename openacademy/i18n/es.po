@@ -32,18 +32,18 @@ msgstr "Sobre"
 #. module: openacademy
 #: field:openacademy.session,active:0
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 #. module: openacademy
 #: model:ir.actions.act_window,name:openacademy.launch_session_wizard
 #: view:openacademy.wizard:openacademy.wizard_form_view
 msgid "Add Attendees"
-msgstr ""
+msgstr "Agregar Asistentes"
 
 #. module: openacademy
 #: model:ir.ui.menu,name:openacademy.menu_launch_session_wizard
 msgid "Add Attendees massive"
-msgstr ""
+msgstr "Add Attendees massive"
 
 #. module: openacademy
 #: field:openacademy.session,attendee_ids:0
@@ -64,7 +64,7 @@ msgstr "Cancelar"
 #. module: openacademy
 #: field:openacademy.session,color:0
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #. module: openacademy
 #: model:ir.ui.menu,name:openacademy.configuration_menu
@@ -74,12 +74,12 @@ msgstr "Configuración"
 #. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
 msgid "Confirm"
-msgstr ""
+msgstr "Confirm"
 
 #. module: openacademy
 #: selection:openacademy.session,state:0
 msgid "Confirmed"
-msgstr ""
+msgstr "Confirmado"
 
 #. module: openacademy
 #: model:ir.actions.act_window,name:openacademy.contact_list_action
@@ -96,95 +96,95 @@ msgstr "Curso"
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_form_view
 msgid "Course Form"
-msgstr ""
+msgstr "Course Form"
 
 #. module: openacademy
 #: model:ir.actions.act_window,name:openacademy.course_list_action
 #: model:ir.ui.menu,name:openacademy.courses_menu
 msgid "Courses"
-msgstr ""
+msgstr "Courses"
 
 #. module: openacademy
 #: field:openacademy.course,create_uid:0 field:openacademy.session,create_uid:0
 #: field:openacademy.wizard,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Created by"
 
 #. module: openacademy
 #: field:openacademy.course,create_date:0
 #: field:openacademy.session,create_date:0
 #: field:openacademy.wizard,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Created on"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.view_openacad_session_kanban
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_form_view
 #: field:openacademy.course,description:0
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: openacademy
 #: field:openacademy.course,display_name:0
 #: field:openacademy.session,display_name:0
 #: field:openacademy.wizard,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Display Name"
 
 #. module: openacademy
 #: selection:openacademy.session,state:0
 msgid "Done"
-msgstr ""
+msgstr "Terminado"
 
 #. module: openacademy
 #: selection:openacademy.session,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Borrador"
 
 #. module: openacademy
 #: field:openacademy.session,duration:0
 msgid "Duration"
-msgstr ""
+msgstr "Duración"
 
 #. module: openacademy
 #: help:openacademy.session,duration:0
 msgid "Duration in days"
-msgstr ""
+msgstr "Duración en días"
 
 #. module: openacademy
 #: field:openacademy.session,hours:0
 msgid "Duration in hours"
-msgstr ""
+msgstr "Duración en horas"
 
 #. module: openacademy
 #: field:openacademy.session,end_date:0
 msgid "End Date"
-msgstr ""
+msgstr "End Date"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.session_form_view
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #. module: openacademy
 #: view:openacademy.course:openacademy.course_search_view
 msgid "Group By"
-msgstr ""
+msgstr "Group By"
 
 #. module: openacademy
 #: field:openacademy.course,id:0 field:openacademy.session,id:0
 #: field:openacademy.wizard,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: openacademy
 #: field:openacademy.session,instructor_id:0 field:res.partner,instructor:0
 msgid "Instructor"
-msgstr ""
+msgstr "Instructor"
 
 #. module: openacademy
 #: field:openacademy.course,__last_update:0
