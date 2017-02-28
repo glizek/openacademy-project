@@ -54,14 +54,14 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
         Test to create two courses with same name.
         To raise constraint of unique name
         '''
-        # new_id = self.create_course('test1', 'test_description', None)
+        new_id = self.create_course('test1', 'test_description', None)
         # print "new_id", new_id
         with self.assertRaisesRegexp(
                 IntegrityError,
                 'duplicate key value violates unique'
                 ' constraint "openacademy_course_name_unique"'
                 ):
-            self.create_course('test1', 'test_description', None)
+                new_id2 = self.create_course('test1', 'test_description', None)
 
     def test_15_duplicate_course(self):
         '''
