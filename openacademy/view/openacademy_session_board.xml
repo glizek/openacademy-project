@@ -22,11 +22,10 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-
         <record model="ir.ui.view" id="board_session_form">
             <field name="name">Session Dashboard Form</field>
             <field name="model">board.board</field>
-            <!--<field name="type">form</field>-->
+            <field name="type">form</field>
             <field name="arch" type="xml">
                 <form string="Session Dashboard">
                     <board style="2-1">
